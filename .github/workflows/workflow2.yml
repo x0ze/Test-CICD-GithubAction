@@ -25,4 +25,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Create folder
         run: |
-          mkdir -p myNewFolder
+          mkdir -p myNewFolder && ls
