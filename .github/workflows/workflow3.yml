@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   Explorer-Actions-Github:
-    if: github.repository == 'x0ze/Test-CICD-GithubAction'
+    if: github.repository == 'x0ze/Test-CICD-GithubActions'
     runs-on: ubuntu-latest
     steps:
       - name: Afficher l'événement déclencheur
