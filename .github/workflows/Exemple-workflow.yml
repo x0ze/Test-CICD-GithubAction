@@ -1,0 +1,23 @@
+# Nom du workflow
+name: Exemple-Workflow
+
+# Le Workflow se lance après quel action github
+on:
+  push:
+    branches: [ "main" ]
+
+# Une exécution de workflow est composée d'une ou plusieurs tâches qui peuvent s'exécuter de manière séquentielle ou en parallèle
+jobs:
+  # Ce workflow contient une seule tâche appelée « build »
+  build:
+    # Le type de runner sur lequel le travail s'exécutera (chez github ou chez vous)
+    runs-on: ubuntu-latest
+
+    # Les étapes représentent une séquence de tâches qui seront exécutées dans le cadre du travail
+    steps:
+      # On peut utiliser d'autre actions dans des actions
+      - uses: actions/checkout@v4
+
+      # Exécute une commande à l'aide du shell des runners
+      - name: Run a one-line script
+        run: echo Hello, world!
